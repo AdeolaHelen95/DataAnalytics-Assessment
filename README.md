@@ -57,10 +57,3 @@ The result was rounded to two decimal places and ordered by the highest CLV.
 
 \- \*\*New Accounts Being Incorrectly Flagged:\*\*    
   Some accounts were not charged in the \`plans\_plan\` table, and their \`start\_date\` indicated they were created less than 365 days ago. This made it difficult to calculate inactivity accurately, as these accounts were being incorrectly flagged as inactive despite being recently opened. It took several revisions to adjust the logic, specifically, to ensure that \`DATEDIFF\` calculations only applied when the account was older than one year, using \`start\_date\` as a fallback only when needed.
-
-\---
-
-\#\# Author
-
-\*\*Adebiyi Adeola\*\*    
-\_Data Analyst-in-Training\_  
